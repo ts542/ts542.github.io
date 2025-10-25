@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
+    <title>Fullscreen Embed</title>
     <style>
-      body {
-        background-color: #fff;
+      html, body {
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;  /* centers horizontally */
-        align-items: center;      /* centers vertically */
-        height: 100vh;            /* full height of the viewport */
+        height: 100%;
+        width: 100%;
+        background-color: #000; /* optional: black background */
+        overflow: hidden; /* hides scrollbars */
+      }
+
+      embed {
+        width: 100vw;   /* full viewport width */
+        height: 100vh;  /* full viewport height */
+        display: block; /* removes small whitespace gaps */
+        border: none;
       }
     </style>
   </head>
   <body>
     <script src="/ruffle/ruffle.js"></script>
     <embed src="tanks2.swf"></embed>
-    <div>Right click For Fullscreen</div>
   </body>
 </html>
