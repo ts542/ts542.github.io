@@ -3,21 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Embed</title>
+    <title>Fullscreen Embed (ChatGPT Fix)</title>
     <style>
       html, body {
         margin: 0;
         padding: 0;
         height: 100%;
         width: 100%;
-        background-color: #000; /* optional: black background */
-        overflow: hidden; /* hides scrollbars */
+        background-color: #000;
+        overflow: hidden;
       }
 
       embed {
-        width: 100vw;   /* full viewport width */
-        height: 100vh;  /* full viewport height */
-        display: block; /* removes small whitespace gaps */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        transform: translate(-50%, -50%);
+        display: block;
         border: none;
       }
     </style>
