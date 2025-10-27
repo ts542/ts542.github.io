@@ -1,102 +1,103 @@
-.e<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Video-Game-Controller-Icon-D-Edit.svg/1200px-Video-Game-Controller-Icon-D-Edit.svg.png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Video-Game-Controller-Icon-D-Edit.svg/1200px-Video-Game-Controller-Icon-D-Edit.svg.png"/>
-    <title>GameCenter</title>
-<h1>Gamecenter</h1>
-<h2><a href="fn.html">Fortnite</a></h2>
-<h2><a href="rvb.html">Red vs blue</a></h2>
-<a href="quake.html"><img src="https://trwglibsccninuamefls.supabase.co/storage/v1/object/public/assets/quake/quake-cover.webp" class="center"></a>
-<a href="mc.html"><img src="https://minecraft.wiki/images/thumb/Adventure_Update.png/120px-Adventure_Update.png?924bf" class="center"></a>
-<h2><a href="atank2.html">Awesome Tanks 2</a></h2>
-<a href="ab.html"><img src="ab.png" class="center"></a>
-<h2><a href="btd.html">Bloons TD 5</a></h2>
-<h2><a href="ps">Game Emulator</a></h2>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameCenter</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Video-Game-Controller-Icon-D-Edit.svg/1200px-Video-Game-Controller-Icon-D-Edit.svg.png" type="image/png">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-   .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-}
-              :root {
-                --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
-                --body-bg-image: url('');
+    /* ===== Global Styles ===== */
+    body {
+      background-color: #003300;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #ffffff;
+      margin: 0;
+      padding: 40px 20px;
+    }
 
-                /* colors */
-                --Main: url('https://openbooks.neocities.org/timewarp/8.0/img/bg.png');
-            }
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-            }
+    h1 {
+      font-size: 52px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+    }
 
-            @font-face {
-                font-family: Candara;
-                src: url(/fonts/Candara.ttf');
-            }
+    h2 {
+      font-size: 28px;
+      margin: 20px 0 10px;
+      font-weight: 600;
+    }
 
-            @font-face {
-                font-family: Candara;
-                src: url('/fonts/Candara.ttf');
-                font-style: italic;
-            }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
 
-            @font-face {
-                font-family: Candara;
-                src: url('/fonts/Candara_Bold.ttf');
-                font-style: italic;
-                font-weight: bold;
-            }
+    a:hover {
+      color: #00ff66;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    }
 
- h1 {
-   font-size: 60px;
-   color: #ffffff;
-   text-align: center;
-   font-family: candara;
-   font-weight: bold;
- }
- h2 {
-   font-size: 40px;
-   color: #ffffff;
-   font-family: candara;
-   text-align: center;
-   font-weight: bold;
- }
- a:link {
-  color:  #ffffff;
-  background-color: transparent;
-  text-decoration: none;
-}
+    /* ===== Image Styles ===== */
+    img {
+      display: block;
+      margin: 15px auto 30px;
+      border-radius: 12px;
+      width: 180px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
+    }
 
-a:visited {
-  color:  #ffffff;
-  background-color: transparent;
-  text-decoration: none;
-}
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px 4px rgba(0, 255, 0, 0.7);
+    }
 
-a:hover {
-  color:  #e6f2ff;
-  background-color: transparent;
-  text-decoration: none;
-  font-style: ;
-}
-
-a:active {
-  color:  #ffffff;
-  background-color: transparent;
-  text-decoration: none;
-}
- body {
-        background-color: #003300;
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 40px;
       }
 
-  img {
-  border-radius: 12px;
-}
+      h2 {
+        font-size: 24px;
+      }
 
-</style>
+      img {
+        width: 140px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>GameCenter</h1>
+
+  <h2><a href="fn.html">Fortnite</a></h2>
+
+  <h2><a href="rvb.html">Red vs Blue</a></h2>
+
+  <a href="quake.html">
+    <img src="https://trwglibsccninuamefls.supabase.co/storage/v1/object/public/assets/quake/quake-cover.webp" alt="Quake Cover">
+  </a>
+
+  <a href="mc.html">
+    <img src="https://minecraft.wiki/images/thumb/Adventure_Update.png/120px-Adventure_Update.png?924bf" alt="Minecraft Adventure Update">
+  </a>
+
+  <h2><a href="atank2.html">Awesome Tanks 2</a></h2>
+
+  <a href="ab.html">
+    <img src="ab.png" alt="Awesome Tanks 2 Thumbnail">
+  </a>
+
+  <h2><a href="btd.html">Bloons TD 5</a></h2>
+
+  <h2><a href="ps">Game Emulator</a></h2>
+</body>
 </html>
-
