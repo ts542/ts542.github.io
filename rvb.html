@@ -1,98 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullscreen Embed (Keep Aspect Ratio)</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fullscreen Embed (Keep Aspect Ratio)</title>
 
-  </head>
-<button type="button"><a href="rl.html">Low Graphics</button></a>
-<button type="button"><a href="rm.html">Medium Graphics</button></a>
-<button type="button"><a href="rh.html">High Graphics (Only in Fullscreen)</button></a>
-    </div>
-  </body>
   <style>
-   .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-}
-              :root {
-                --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
-                --body-bg-image: url('');
+    body {
+      background-color: #003300;
+      font-family: Candara, Nunito, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
 
-                /* colors */
-                --Main: url('https://openbooks.neocities.org/timewarp/8.0/img/bg.png');
-            }
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-            }
+    button {
+      background-color: #006600;
+      color: #ffffff;
+      border: 2px solid #00cc00;
+      border-radius: 8px;
+      font-size: 20px;
+      padding: 12px 24px;
+      margin: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: Candara, sans-serif;
+      font-weight: bold;
+      text-shadow: 0 0 4px #003300;
+      box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
+    }
 
-            @font-face {
-                font-family: Candara;
-                src: url(/fonts/Candara.ttf');
-            }
+    button:hover {
+      background-color: #00cc00;
+      color: #003300;
+      box-shadow: 0 0 20px 4px rgba(0, 255, 0, 0.8), 0 0 10px 2px rgba(0, 255, 0, 0.5);
+      transform: scale(1.05);
+    }
 
-            @font-face {
-                font-family: Candara;
-                src: url('/fonts/Candara.ttf');
-                font-style: italic;
-            }
+    button a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
 
-            @font-face {
-                font-family: Candara;
-                src: url('/fonts/Candara_Bold.ttf');
-                font-style: italic;
-                font-weight: bold;
-            }
+    h1 {
+      font-size: 60px;
+      color: #ffffff;
+      text-align: center;
+      font-family: Candara;
+      font-weight: bold;
+    }
 
- h1 {
-   font-size: 60px;
-   color: #ffffff;
-   text-align: center;
-   font-family: candara;
-   font-weight: bold;
- }
- h2 {
-   font-size: 40px;
-   color: #ffffff;
-   font-family: candara;
-   text-align: center;
-   font-weight: bold;
- }
- a:link {
-  color:  #ffffff;
-  background-color: transparent;
-  text-decoration: none;
-}
+    h2 {
+      font-size: 40px;
+      color: #ffffff;
+      font-family: Candara;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 
-a:visited {
-  color:  #ffffff;
-  background-color: transparent;
-  text-decoration: none;
-}
+  <h1>Graphics Settings</h1>
+  <button><a href="rl.html">Low Graphics</a></button>
+  <button><a href="rm.html">Medium Graphics</a></button>
+  <button><a href="rh.html">High Graphics (Only in Fullscreen)</a></button>
 
-a:hover {
-  color:  #e6f2ff;
-  background-color: transparent;
-  text-decoration: none;
-  font-style: ;
-}
-
-a:active {
-  color:  #ffffff;
-  background-color: transparent;
-  text-decoration: none;
-}
- body {
-        background-color: #003300;
-      }
-
-  img {
-  border-radius: 12px;
-}
-
-</style>
+</body>
 </html>
