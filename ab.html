@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullscreen Embed (Keep Aspect Ratio)</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        overflow: hidden;
+      }
+
+      .embed-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      embed {
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: 550 / 400; /* keep the original SWF shape */
+        border: none;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="/ruffle/ruffle.js"></script>
+    <div class="embed-container">
+      <embed src="AngryBirds.swf"></embed>
+    </div>
+  </body>
+</html>
