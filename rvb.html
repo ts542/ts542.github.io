@@ -3,68 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fullscreen Embed (Keep Aspect Ratio)</title>
+  <title>Graphics Settings</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    /* ====== Global Styles ====== */
     body {
       background-color: #003300;
-      font-family: Candara, Nunito, sans-serif;
+      font-family: 'Poppins', sans-serif;
       text-align: center;
-      padding-top: 100px;
+      padding: 100px 20px;
+      margin: 0;
+      color: #ffffff;
     }
 
-    button {
+    h1 {
+      font-size: 48px;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+    }
+
+    /* ====== Button Styles ====== */
+    .btn {
+      display: inline-block;
       background-color: #006600;
       color: #ffffff;
       border: 2px solid #00cc00;
       border-radius: 8px;
       font-size: 20px;
-      padding: 12px 24px;
+      padding: 12px 30px;
       margin: 10px;
       cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
       transition: all 0.3s ease;
-      font-family: Candara, sans-serif;
-      font-weight: bold;
-      text-shadow: 0 0 4px #003300;
       box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
     }
 
-    button:hover {
+    .btn:hover {
       background-color: #00cc00;
       color: #003300;
       box-shadow: 0 0 20px 4px rgba(0, 255, 0, 0.8), 0 0 10px 2px rgba(0, 255, 0, 0.5);
       transform: scale(1.05);
     }
-
-    button a {
-      color: inherit;
-      text-decoration: none;
-      display: block;
-    }
-
-    h1 {
-      font-size: 60px;
-      color: #ffffff;
-      text-align: center;
-      font-family: Candara;
-      font-weight: bold;
-    }
-
-    h2 {
-      font-size: 40px;
-      color: #ffffff;
-      font-family: Candara;
-      text-align: center;
-      font-weight: bold;
-    }
   </style>
 </head>
+
 <body>
-
   <h1>Graphics Settings</h1>
-  <button><a href="rl.html">Low Graphics</a></button>
-  <button><a href="rm.html">Medium Graphics</a></button>
-  <button><a href="rh.html">High Graphics (Only in Fullscreen)</a></button>
 
+  <a class="btn" href="rl.html">Low Graphics</a>
+  <a class="btn" href="rm.html">Medium Graphics</a>
+  <a class="btn" href="rh.html">High Graphics (Only in Fullscreen)</a>
 </body>
 </html>
