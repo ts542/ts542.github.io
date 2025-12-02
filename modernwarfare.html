@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Warfarer DS Emulator</title>
+  <title>Google Classroom</title>
+  <link rel="icon" href="gc.svg" type="image/svg">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     html, body {
       margin: 0;
@@ -13,34 +18,27 @@
       overflow: hidden;
       background: #000;
     }
-    #game {
+
+    embed {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
+      border: none;
     }
   </style>
 </head>
+
 <body>
-  <div id="game"></div>
-
-  <script>
-    // EmulatorJS configuration
+<div style="width:640px;height:480px;max-width:100%">
+        <div id="game"></div>
+      </div>
+<script type="text/javascript">
     EJS_player = '#game';
-    EJS_core = 'nds';
-
-    // BIOS file (raw GitHub URL)
-    EJS_biosUrl = 'https://raw.githubusercontent.com/ts542/ts542/main/nds/bios.zip';
-
-    // ROM parts (raw GitHub URLs)
-    EJS_gameUrl = [
-      'https://raw.githubusercontent.com/ts542/ts542/main/nds/mwm_part_aa',
-      'https://raw.githubusercontent.com/ts542/ts542/main/nds/mwm_part_ab',
-      'https://raw.githubusercontent.com/ts542/ts542/main/nds/mwm_part_ac',
-      'https://raw.githubusercontent.com/ts542/ts542/main/nds/mwm_part_ad',
-      // Add more parts here if needed
-    ];
-  </script>
-
-  <!-- Load EmulatorJS -->
-  <script src="https://cdn.emulatorjs.org/latest/loader.js"></script>
+    EJS_gameUrl = 'https://files.fm/server_scripts/zip/zip_streamer/upload_zip_streamer.php?uhash=9v2rjkcznq'; // Url to Game rom
+    EJS_core = 'nds';  // Optional core: melonds
+</script>
+<script src="https://www.emulatorjs.com/loader.js"></script>
 </body>
 </html>
