@@ -24,14 +24,24 @@
 <body>
   <div id="game"></div>
 
-<script>
-  EJS_player = '#game';
-  EJS_gameUrl = 'https://archive.org/download/call-of-duty-modern-warfare-mobilized/Call_of_Duty_Mobil_Warfare_Mobilized.nds';
-  EJS_core = 'nds';
+  <script>
+    // REQUIRED: div ID
+    EJS_player = '#game';
 
-  // Correct GitHub RAW URL
-  EJS_biosUrl = 'https://raw.githubusercontent.com/ts542/ts542/main/ds/bios.zip';
-</script>
+    // Use official CDN for core data (fixes most blank screens)
+    EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+
+    // NDS core
+    EJS_core = 'nds';
+
+    // ROM
+    EJS_gameUrl = "https://archive.org/download/call-of-duty-modern-warfare-mobilized/Call_of_Duty_Mobil_Warfare_Mobilized.nds";
+
+    // BIOS zip from YOUR repo
+    EJS_biosUrl = "https://raw.githubusercontent.com/ts542/ts542/main/ds/bios.zip";
+  </script>
+
+  <!-- official loader -->
+  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 </body>
 </html>
-
