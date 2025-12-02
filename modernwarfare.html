@@ -1,60 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ND Emulator</title>
+  <title>Modern Warfare DS Emulator</title>
   <style>
-    html, body { margin:0; padding:0; width:100%; height:100%; background:#000; }
-    #game { width:100vw; height:100vh; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+    #game {
+      width: 100vw;
+      height: 100vh;
+    }
   </style>
 </head>
 <body>
   <div id="game"></div>
 
-  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
   <script>
+    // EmulatorJS config
     EJS_player = '#game';
     EJS_core = 'nds';
     EJS_biosUrl = 'https://ts542.github.io/nds/bios.zip';
 
-    // List all your ROM parts hosted on GitHub Pages
-    const romParts = [
+    // ROM parts URLs (replace with your GitHub raw URLs for split parts)
+    EJS_gameUrl = [
       'https://ts542.github.io/mwm_part_aa',
       'https://ts542.github.io/mwm_part_ab',
       'https://ts542.github.io/mwm_part_ac',
       'https://ts542.github.io/mwm_part_ad',
-      // Add more parts if needed
+      // add more parts if needed
     ];
-
-    async function fetchAndCombine(parts) {
-      const buffers = [];
-      for (const url of parts) {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('Failed to fetch ' + url);
-        const buf = await res.arrayBuffer();
-        buffers.push(buf);
-      }
-      // Combine all ArrayBuffers
-      let totalLength = buffers.reduce((acc, b) => acc + b.byteLength, 0);
-      const combined = new Uint8Array(totalLength);
-      let offset = 0;
-      for (const buf of buffers) {
-        combined.set(new Uint8Array(buf), offset);
-        offset += buf.byteLength;
-      }
-      return combined.buffer; // Return ArrayBuffer
-    }
-
-    fetchAndCombine(romParts)
-      .then(buffer => {
-        // Create a Blob URL to pass to EmulatorJS
-        const blob = new Blob([buffer], { type: 'application/octet-stream' });
-        EJS_gameUrl = URL.createObjectURL(blob);
-        // Start the emulator
-        window.initEmulator && window.initEmulator();
-      })
-      .catch(err => console.error('Failed to load ROM parts:', err));
   </script>
+
+  <!-- Load EmulatorJS from CDN -->
+  <script src="https://cdn.emulatorjs.org/latest/loader.js"></script>
 </body>
 </html>
