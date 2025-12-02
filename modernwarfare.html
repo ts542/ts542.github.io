@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Warfare DS Emulator</title>
+  <title>Modern Warfarer DS Emulator</title>
   <style>
     html, body {
       margin: 0;
@@ -24,22 +23,24 @@
   <div id="game"></div>
 
   <script>
-    // EmulatorJS config
+    // EmulatorJS configuration
     EJS_player = '#game';
     EJS_core = 'nds';
-    EJS_biosUrl = 'https://ts542.github.io/nds/bios.zip';
 
-    // ROM parts URLs (replace with your GitHub raw URLs for split parts)
+    // BIOS file (raw GitHub URL)
+    EJS_biosUrl = 'https://raw.githubusercontent.com/ts542/ts542/main/nds/bios.zip';
+
+    // ROM parts (raw GitHub URLs)
     EJS_gameUrl = [
-      'https://ts542.github.io/mwm_part_aa',
-      'https://ts542.github.io/mwm_part_ab',
-      'https://ts542.github.io/mwm_part_ac',
-      'https://ts542.github.io/mwm_part_ad',
-      // add more parts if needed
+      'https://raw.githubusercontent.com/ts542/ts542/main/nds/mwm_part_aa',
+      'https://raw.githubusercontent.com/ts542/ts542/main/nds/mwm_part_ab',
+      'https://raw.githubusercontent.com/ts542/ts542/main/nds/mwm_part_ac',
+      'https://raw.githubusercontent.com/ts542/ts542/main/nds/mwm_part_ad',
+      // Add more parts here if needed
     ];
   </script>
 
-  <!-- Load EmulatorJS from CDN -->
+  <!-- Load EmulatorJS -->
   <script src="https://cdn.emulatorjs.org/latest/loader.js"></script>
 </body>
 </html>
