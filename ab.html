@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Google Classroom</title>
-  <link rel="icon" href="gc.svg" type="image/svg">
+    <link rel="icon" href="gc.svg" type="image/svg">
+
     <style>
       html, body {
         margin: 0;
@@ -62,16 +64,17 @@
 
     <button id="fullscreen-btn">⛶</button>
 
-    <div class="embed-container">
+    <div class="embed-container" id="embed-wrapper">
       <embed src="AngryBirds.swf"></embed>
     </div>
 
     <script>
       const btn = document.getElementById("fullscreen-btn");
+      const embedWrapper = document.getElementById("embed-wrapper");
 
       btn.addEventListener("click", () => {
         if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen();
+          embedWrapper.requestFullscreen();
         } else {
           document.exitFullscreen();
         }
